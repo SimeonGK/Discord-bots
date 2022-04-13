@@ -1,6 +1,6 @@
 // Require the necessary discord.js classes
 const { Client, Intents } = require('discord.js');
-const { token } = require('./config.json');
+require('dotenv').config()
 const axios = require('axios');
 
 // Create a new client instance
@@ -11,7 +11,7 @@ client.once('ready', () => {
 	console.log('Ready!');
 });
 // Login to Discord with your client's token
-client.login(token);
+client.login(process.env.token1);
 
 // Call api and alternate updating FP with listing every 30 seconds
 const updateFloorPrice = () => {
