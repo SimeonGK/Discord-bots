@@ -28,6 +28,8 @@ const updateStatus =  () => {
 				}
 			]
 		})
+		client.user?.setUsername(`🍯/💲: ${value}`)
+		
 	  })
 	  .catch((err) => {
 		  console.log(err);
