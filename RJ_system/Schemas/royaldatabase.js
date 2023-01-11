@@ -6,5 +6,7 @@ module.exports = model(
     Guild: String,
     User: String,
     Royal_Jelly: Number,
+    WeeklyRj: Boolean,
+    Pollinator: Boolean,
   })
 );

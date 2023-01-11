@@ -1,7 +1,7 @@
-const { ChatInputCommandInteraction } = require("discord.js");
+const { ChatInputCommandInteraction } = require('discord.js');
 
 module.exports = {
-  name: "interactionCreate",
+  name: 'interactionCreate',
   /**
    *
    * @param {ChatInputCommandInteraction} interaction
@@ -12,13 +12,13 @@ module.exports = {
     const command = client.commands.get(interaction.commandName);
     if (!command)
       return interaction.reply({
-        content: "This command is outdated.",
+        content: 'This command is outdated.',
         ephemeral: true,
       });
 
-    if (command.developer && interaction.user.id !== "347353547299618817")
+    if (command.developer && interaction.user.id !== '347353547299618817')
       return interaction.reply({
-        content: "This command is only available to the developer.",
+        content: 'This command is only available to the developer.',
         ephemeral: true,
       });
 
