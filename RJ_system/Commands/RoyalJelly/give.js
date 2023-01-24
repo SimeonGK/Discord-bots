@@ -49,11 +49,7 @@ module.exports = {
       console.log(userData.Royal_Jelly);
       userData.save();
     }
-    user.setNickname(`${username} [${userData.Royal_Jelly}RJ]`);
-    interaction.reply({
-      content: `Added royal jelly to ${username}`,
-      ephemeral: true,
-    });
+    interaction.reply({ content: `Succesfully added RJ to ${username}` });
     console.log('Added');
   },
 };

@@ -1,10 +1,11 @@
-const { ChatInputCommandInteraction } = require('discord.js');
+const { ChatInputCommandInteraction, Client } = require('discord.js');
 
 module.exports = {
   name: 'interactionCreate',
   /**
    *
    * @param {ChatInputCommandInteraction} interaction
+   * @param {Client} client
    */
   execute(interaction, client) {
     if (!interaction.isChatInputCommand()) return;
